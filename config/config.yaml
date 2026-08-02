@@ -1,0 +1,20 @@
+# Global BIM-Semantic-Retrieval Project Configuration
+
+paths:
+  raw_ifc_dir: "data/ifc"
+  processed_dir: "data/processed"
+  database_dir: "data/database"
+  log_dir: "data/logs"
+
+models:
+  embedding: "all-mpnet-base-v2"  # Baseline dense vector transformer
+  llm: "gpt-4o-mini"               # Model for retrieval orchestration
+
+database:
+  vector_db: "qdrant"
+  storage_mode: "local"            # Local storage mode using data/database/
+  collection_name: "bim_elements"
+
+spatial:
+  tolerance_mm: 5.0                # Collision/proximity threshold metric
+  enable_rtree: true
